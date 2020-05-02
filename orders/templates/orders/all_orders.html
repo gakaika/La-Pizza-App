@@ -1,0 +1,52 @@
+{% extends "orders/layout.html" %}
+
+{% block main %}
+{% load static %}
+<div class="row mt-5 mb-1">
+    <div class="col-6">
+        <h3 class="font-sp font-weight-bold text-primary">Recent Orders</h3>
+    </div>
+</div>
+
+{% if orders %}
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Product Type</th>
+            <th scope="col">Size</th>
+            <th scope="col">Item</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+                <tr>
+                    <th scope="row">{{order.pk}}</th>
+                    <td>{{order.product_type}}</td>
+                    {% if order.size %}
+                        <td>{{order.size}}</td>
+                    {% else %}
+                        <td>Standard</td>
+                    {% endif %}
+                    {% if order.num_toppings %}
+                        <td>{{order.num_toppings}} {% if order.num_toppings > 1 %}Toppings{% else %}Topping{% endif %} - {% for i in order.pizza_toppings.all %} {{i.topping}}{% if not forloop.last %},{% endif %} {% endfor %}</td>
+                    {% else %}
+                        <td>{{order.item_type}}</td>
+                    {% endif %}
+                    <td>${{order.cost|floatformat:2}}</td>
+                    {% if order.order_completed %}
+                        <td class="text-success font-weight-bold">Completed</td>
+                    {% else %}
+                        <td class="text-warning font-weight-bold">In Progress</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <h5 class="text-muted mt-4 ml-4">No Orders Yet, Add Items in Your Cart and Purchase!</h5>
+{% endif %}
+
+{% endblock %}

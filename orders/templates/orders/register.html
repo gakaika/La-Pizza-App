@@ -1,0 +1,35 @@
+{% extends "orders/layout.html" %}
+
+{% block main %}
+<div class="container-fluid bg fm-inp">
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <form class="login-container" method="post">
+                {% csrf_token %}
+                <label id="register-title">Register</label>
+                <div class="form-group-s">
+                    <input type="text" autocomplete="off" autofocus class="form-control" name="first_name" placeholder="First Name" required>
+                </div>
+                <div class="form-group-s">
+                    <input type="text" autocomplete="off" autofocus class="form-control" name="last_name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group-s">
+                    <input type="email" autocomplete="off" autofocus class="form-control" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group-s">
+                  <input type="text" autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" required>
+                </div>
+                <div class="form-group-s">
+                  <input type="password" class="form-control lg" name="password" placeholder="Password" required>
+                </div>
+                <div class="form-group-s">
+                    <input type="password" class="form-control lg" name="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-md" id="register-button">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+</div>
+{% endblock %}

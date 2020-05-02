@@ -1,0 +1,124 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+.fm-inp .form-control
+{
+    /* center form controls*/ 
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: 60%;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents 
+    text-align: center;*/
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+
+.form-group-s
+{
+    padding-bottom: 20px;
+}
+
+.navbar
+{
+    background-color: #51d0de;
+}
+
+#brand_name
+{
+    font-family: "Atomic Age", sans-serif; 
+    font-size: 37px;
+}
+
+.bg {
+    position: absolute;
+    left: 0%;
+    /* Attribute for image from https://www.vecteezy.com/vector-art/695413-seamless-pattern-of-pizza-isolated-on-black-background */
+    background: url('pizza_background.jpg') repeat center center fixed;
+    background-size: 300px 207px;
+    width: 100%;
+    height: 100%;
+}
+
+.login-container{
+    position: relative;
+    top: 30%;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    background-color: #093145;
+    border: 2px solid #EBC944;
+    opacity: 0.93;
+    padding: 30px 0px 70px;
+    margin-top: 15vh;
+    -webkit-box-shadow: 0px 0px 55px 15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 55px 15px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 55px 15px rgba(0,0,0,0.75);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+#register-title{
+    font-family: "Verdana";
+    color: white;
+    font-size: 40px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.error{
+    padding-bottom: 10px;
+}
+
+#error1{
+    margin-top: 10vh;
+    font-size: 50px;
+}
+
+#error_image{
+    margin-top: 10vh;
+    width: 8vw;
+    height: 8vw;
+}
+
+.font-sp{
+    font-family: "Atomic Age", sans-serif; 
+}
+
+.t-spaced{
+    line-height: 1.9;
+}
+
+.text-menu{
+    position: relative;
+    left: 50%;
+}
+
+#salad_image{
+    position: relative;
+    top: 0%;
+}
+
+.product_image{
+    width: 250px;
+    height: auto;
+}
+

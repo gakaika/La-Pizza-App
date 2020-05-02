@@ -1,0 +1,107 @@
+{% extends "orders/layout.html" %}
+
+{% block main %}
+{% load static %}
+<div class="row mt-5 mb-1">
+    <div class="col-6">
+        <h3 class="font-sp font-weight-bold">About Us</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <img class="img-fluid" src="{% static 'orders/logo.png' %}" width="200" height="200">
+    </div>
+    <div class="col-8">
+        <h5 class="mt-3 t-spaced"><span class="font-sp font-weight-bold">La Pizza</span> is committed to the highest quality standards and delivering our customers with enjoyable food. 
+            Enjoy our signature <span class="font-sp font-weight-bold">Pizzas</span> and <span class="font-sp font-weight-bold">Subs</span> that we have been baking for over 10 years. 
+            Place online orders, and the delivery is <span class="font-sp font-weight-bold">FREE</span> if over one hour!
+        </h5>
+    </div>
+</div>
+
+<div class="row mt-5 pt-3">
+    <div class="col-12">
+        <h3 class="font-sp font-weight-bold">Our Menu</h3>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-6">
+        <h4 class="font-sp ml-3">Regular Pizza</h4>
+    </div>
+    <div class="col-6">
+        <h4 class="font-sp ml-3">Sicilian Pizza</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <img class="ml-3 d-inline" src="{% static 'orders/regular_pizza.png' %}" width="300">
+        <div class="d-inline-block">
+            {% for i in reg_pizza_types %}
+            <h5 class="text-menu"><a href="{% url 'product' 'Regular Pizza' i %}">{{i}}</a></h5>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-6">
+        <img class="ml-3 d-inline" src="{% static 'orders/sicilian_pizza.png' %}" width="300">
+        <div class="d-inline-block">
+            {% for i in sicilian_pizza_types %}
+            <h5 class="text-menu"><a href="{% url 'product' 'Sicilian Pizza' i %}">{{i}}</a></h5>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="row mt-5 pt-3">
+    <div class="col-6">
+        <h4 class="font-sp ml-3">Subs</h4>
+    </div>
+    <div class="col-6">
+        <h4 class="font-sp ml-3">Pasta</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <img class="ml-3 d-inline" src="{% static 'orders/sandwich.png' %}" width="300">
+        <div class="d-inline-block mt-3">
+            {% for i in sub_types %}
+            <h5 class="text-menu"><a href="{% url 'product' 'Sub' i %}">{{i}}</a></h5>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-6">
+        <img class="ml-3 d-inline" src="{% static 'orders/pasta.png' %}" width="300">
+        <div class="d-inline-block mt-3">
+            {% for i in pasta_types %}
+            <h5 class="text-menu"><a href="{% url 'product' 'Pasta' i %}">{{i}}</a></h5>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5 pt-3">
+    <div class="col-6">
+        <h4 class="font-sp ml-3">Salads</h4>
+    </div>
+    <div class="col-6">
+        <h4 class="font-sp ml-3">Dinner Platters</h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <img class="ml-3 d-inline" id="salad_image" src="{% static 'orders/salad.png' %}" width="300">
+        <div class="d-inline-block mt-3">
+            {% for i in salad_types %}
+            <h5 class="text-menu"><a href="{% url 'product' 'Salad' i %}">{{i}}</a></h5>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-6">
+        <img class="ml-3 d-inline align-top mt-3" src="{% static 'orders/dinner_platter.png' %}" width="300">
+        <div class="d-inline-block mt-3">
+            {% for i in dinner_platter_types %}
+            <h5 class="text-menu"><a href="{% url 'product' 'Dinner Platter' i %}">{{i}}</a></h5>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

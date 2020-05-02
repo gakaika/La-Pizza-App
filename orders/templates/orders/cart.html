@@ -1,0 +1,49 @@
+{% extends "orders/layout.html" %}
+
+{% block main %}
+{% load static %}
+<div class="row mt-5 mb-1">
+    <div class="col-6">
+        <h3 class="font-sp font-weight-bold text-primary">Your Cart</h3>
+    </div>
+</div>
+
+{% if cart_orders %}
+    <a href="{% url 'clear_cart' %}" class="btn btn-warning float-right mb-2 mr-3 text-white" role="button">Clear Cart</a>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Product Type</th>
+            <th scope="col">Size</th>
+            <th scope="col">Item</th>
+            <th scope="col">Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for order in cart_orders %}
+                <tr>
+                    <th scope="row">{{order.pk}}</th>
+                    <td>{{order.product_type}}</td>
+                    {% if order.size %}
+                        <td>{{order.size}}</td>
+                    {% else %}
+                        <td>Standard</td>
+                    {% endif %}
+                    {% if order.num_toppings %}
+                        <td>{{order.num_toppings}} {% if order.num_toppings > 1 %}Toppings{% else %}Topping{% endif %} - {% for i in order.pizza_toppings.all %} {{i.topping}}{% if not forloop.last %},{% endif %} {% endfor %}</td>
+                    {% else %}
+                        <td>{{order.item_type}}</td>
+                    {% endif %}
+                    <td>${{order.cost|floatformat:2}}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+    <h4 class="text-info float-right font-weight-bold">Total Cost: <span class="text-success">${{total_cost|floatformat:2}}</span></h4>
+    <a href="{% url 'submit_orders' %}" class="btn btn-success float-left mt-4 ml-3 text-white" role="button">Submit Order</a>
+{% else %}
+    <h5 class="text-muted mt-4 ml-4">No Items Yet, Add Items in Your Cart!</h5>
+{% endif %}
+
+{% endblock %}

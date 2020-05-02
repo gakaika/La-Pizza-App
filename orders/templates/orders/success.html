@@ -1,0 +1,15 @@
+{% extends "orders/layout.html" %}
+
+{% block main %}
+{% load static %}
+<div class="row">
+    <div class="col-2">
+        <img src="{% static 'orders/shopping_cart.png' %}" alt="shopping cart" id="error_image">
+    </div>
+    <div class="col-10">
+        <h1 class="text-primary error" id="error1">Success</h1>
+        <h3 class="text-muted error">{{ message }}</h3>
+    </div>
+</div>
+
+{% endblock %}
