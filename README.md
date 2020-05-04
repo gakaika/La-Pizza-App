@@ -15,3 +15,4 @@ This web application is built with Django in Python and Javascript.
 ## Features
 * Powerful adminstrator user interface to manage product collection, active orders, and product customizations on the SQLite database
 * Intuitive and easy to use interface for customers with easy viewing of products on menu, customizing products, saving items in carts and placing an order
+* Allows users to check the status of their orders
