@@ -13,4 +13,5 @@ This web application is built with Django in Python and Javascript.
   * Other functionality such as only allowing the user to select the number of toppings specified, allowing form submissions only when all relevent criteria inputted for a product, and updating cost with AJAX when product attributes changed.
 
 ## Features
-* Intuitive and easy to use interface
+* Powerful adminstrator user interface to manage product collection, active orders, and product customizations on the SQLite database
+* Intuitive and easy to use interface for customers with easy viewing of products on menu, customizing products, saving items in carts and placing an order
