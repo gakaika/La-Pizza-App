@@ -10,4 +10,7 @@ This web application is built with Django in Python and Javascript.
 * **Bootstrap 4** used for styling web pages, along with custom **CSS** code
 * **Javascript** used for enhancing the user experience when browsing the menu items with the following functionality:
   * **AJAX** with **XML Http Requests** used to dynamically fetch the updated cost from the server whenever the user changes the product's attributes such as pizza toppings, size, etc.
-  * Other functionality such as
+  * Other functionality such as only allowing the user to select the number of toppings specified, allowing form submissions only when all relevent criteria inputted for a product, and updating cost with AJAX when product attributes changed.
+
+## Features
+* Intuitive and easy to use interface
