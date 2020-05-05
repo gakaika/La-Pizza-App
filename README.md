@@ -13,6 +13,17 @@ This web application is built with **Django** in Python and **Javascript**.
   * Other functionality such as only allowing the user to select the number of toppings specified, allowing form submissions only when all relevent criteria inputted for a product, and updating cost with AJAX when product attributes changed.
 
 ## Features
-* Powerful adminstrator user interface to manage product collection, active orders, and product customizations on the SQLite database
+* Powerful adminstrator user interface to manage product collection and customizations, as well as track active orders and update their status on the SQLite database
 * Intuitive and easy to use interface for customers with easy viewing of products on menu, customizing products, saving items in carts and placing an order
-* Allows users to check the status of their orders
+* Allows users to check the status of their orders once placed
+
+## Setup and Usage
+First create a super-user to manage the application's database, which will have access to the product collection and active orders for fulfillment. Simply run the below command inside the folder for this application, and follow the prompts:
+
+    python manage.py createsuperuser
+
+After this, the application can be run by:
+
+    python manage.py runserver
+
+To access the adminstrator user interface, simply go to the **/admin** route. Please look at the demo video on how to use this to track orders, update their status, and managing the product collection.
