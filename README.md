@@ -27,3 +27,6 @@ After this, the application can be run by:
     python manage.py runserver
 
 To access the adminstrator user interface, simply go to the **/admin** route. Please look at the demo video on how to use this to track orders, update their status, and managing the product collection.
+
+## Credits
+Restaurant menu inspired from [Pinocchio's Pizza and Subs](http://www.pinocchiospizza.net/menu.html)
