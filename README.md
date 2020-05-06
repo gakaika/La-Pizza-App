@@ -1,6 +1,6 @@
 # La Pizza App
 
-A pizza and subs restaurant online ordering application wherein customers can view the menu and prices, add items in their cart, and place orders intended for pickup and payment later. Following this, the restaurant staff or owner can view all active orders in the adminstrator interface and update the status accordingly. 
+A pizza and subs restaurant online ordering application wherein customers can view the menu and prices, add items in their cart, and place orders intended for pickup and payment later. Following this, the restaurant staff or owner can view all active orders in the administrator interface and update the status accordingly. 
 
 This web application is built with **Django** in Python and **Javascript**.
 
@@ -13,7 +13,7 @@ This web application is built with **Django** in Python and **Javascript**.
   * Other functionality such as only allowing the user to select the number of toppings specified, allowing form submissions only when all relevent criteria inputted for a product, and updating cost with AJAX when product attributes changed.
 
 ## Features
-* Powerful adminstrator user interface to manage product collection and customizations, as well as track active orders and update their status on the SQLite database
+* Powerful administrator user interface to manage product collection and customizations, as well as track active orders and update their status on the SQLite database
 * Intuitive and easy to use interface for customers with easy viewing of products on menu, customizing products, saving items in carts and placing an order
 * Allows users to check the status of their orders once placed
 * Strong error management checks on both client and server side
@@ -27,7 +27,7 @@ After this, the application can be run by:
 
     python manage.py runserver
 
-To access the adminstrator user interface, simply go to the **/admin** route. Please look at the demo video on how to use this to track orders, update their status, and managing the product collection.
+To access the administrator user interface, simply go to the **/admin** route. Please look at the demo video on how to use this to track orders, update their status, and managing the product collection.
 
 ## Credits
 Restaurant menu inspired from [Pinocchio's Pizza and Subs](http://www.pinocchiospizza.net/menu.html)
