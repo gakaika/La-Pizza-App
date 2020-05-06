@@ -18,6 +18,9 @@ This web application is built with **Django** in Python and **Javascript**.
 * Allows users to check the status of their orders once placed
 * Strong error management checks on both client and server side
 
+## Video Demo
+Please view the short video demonstration [here](https://youtu.be/RppkGIFMQPs) for a quick overview.
+
 ## Setup and Usage
 First create a super-user to manage the application's database, which will have access to the product collection and active orders for fulfillment. Simply run the below command inside the folder for this application, and follow the prompts:
 
@@ -27,7 +30,7 @@ After this, the application can be run by:
 
     python manage.py runserver
 
-To access the administrator user interface, simply go to the **/admin** route. Please look at the demo video on how to use this to track orders, update their status, and managing the product collection.
+To access the administrator user interface, simply go to the **/admin** route. Please look at the [demo video](https://youtu.be/RppkGIFMQPs) on how to use this to track orders, update their status, and managing the product collection.
 
 ## Credits
 Restaurant menu inspired from [Pinocchio's Pizza and Subs](http://www.pinocchiospizza.net/menu.html)
