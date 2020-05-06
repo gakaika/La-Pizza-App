@@ -16,6 +16,7 @@ This web application is built with **Django** in Python and **Javascript**.
 * Powerful adminstrator user interface to manage product collection and customizations, as well as track active orders and update their status on the SQLite database
 * Intuitive and easy to use interface for customers with easy viewing of products on menu, customizing products, saving items in carts and placing an order
 * Allows users to check the status of their orders once placed
+* Strong error management checks on both client and server side
 
 ## Setup and Usage
 First create a super-user to manage the application's database, which will have access to the product collection and active orders for fulfillment. Simply run the below command inside the folder for this application, and follow the prompts:
