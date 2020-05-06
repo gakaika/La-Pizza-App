@@ -2,7 +2,7 @@
 
 A pizza and subs restaurant online ordering application wherein customers can view the menu and prices, add items in their cart, and place orders intended for pickup and payment later. Following this, the restaurant staff or owner can view all active orders in the administrator interface and update the status accordingly. 
 
-This web application is built with **Django** in Python and **Javascript**.
+This web application is built with **Django** in Python and **Javascript**, a [demo](#video-demo) is also available.
 
 ## Built With
 * **Django** used for server-side management
